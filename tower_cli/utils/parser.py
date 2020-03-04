@@ -127,7 +127,7 @@ def process_extra_vars(extra_vars_list, force_json=True):
             opt_dict = string_to_dict(extra_vars_opt, allow_kv=False)
         else:
             # Convert text markup to a dictionary liberally
-            opt_dict = string_to_dict(extra_vars_opt, allow_kv=True)
+            opt_dict = string_to_dict(extra_vars_list, allow_kv=True)
         # Rolling YAML-based string combination
         if any(line.startswith("#") for line in extra_vars_opt.split('\n')):
             extra_vars_yaml += extra_vars_opt + "\n"
